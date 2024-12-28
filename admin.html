@@ -12,18 +12,18 @@
     <form>
         <h3>Add New Books</h3>
         <label for="title_id">Title : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="title_id" type="text"><br>
+        <input required id="title_id" type="text"><br>
         <label for="author_id">Author : </label>&nbsp;&nbsp;
-        <input id="author_id" type="text">
+        <input required id="author_id" type="text">
         <label for="author_id">Category : </label>
-        <select name="" id="">
-            <option id = "opt0" >Select Genre</option>
+        <select required id="category_id">
+            <option id = "opt0" hidden >Select Genre</option>
             <option id = "opt1" value="fiction">Fiction</option>
             <option id = "opt2" value="comedy">Comedy</option>
             <option id = "opt3" value="technical">Technical</option>
         </select>
         <div id="btn">
-            <button type="reset" onclick="verifyCredentials()"><strong>ADD</strong></button>
+            <button type="reset" onclick="addBooks()"><strong>ADD</strong></button>
         </div>
     </form>
 </body>
@@ -34,5 +34,27 @@
         alert("Admin Not Logged In")
         window.location.href = "index.html"; 
     }
+    function addBooks(){
+        var title = document.getElementById("title_id").value;
+        var author = document.getElementById("author_id").value;
+        var category = document.getElementById("title_id").value;
+        var bookObj = {
+            title,
+            author,
+            category,
+            "isAvailable": true,
+            "isVerified": false,
+            "borrowedDays": null,
+            "imageUrl": "https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg"
+        }
+        fetch("https://indecisive-coherent-scar.glitch.me/books",{
+                method: "POST",
+                headers: {
+                    "content-type":"application/json",
+                },
+                body:JSON.stringify(bookObj),
+            });
+            alert("Book added successfully");
+        }
 </script>
 </html>
