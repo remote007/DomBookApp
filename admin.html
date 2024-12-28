@@ -37,7 +37,7 @@
     function addBooks(){
         var title = document.getElementById("title_id").value;
         var author = document.getElementById("author_id").value;
-        var category = document.getElementById("title_id").value;
+        var category = document.getElementById("category_id").value;
         var bookObj = {
             title,
             author,
@@ -47,6 +47,7 @@
             "borrowedDays": null,
             "imageUrl": "https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg"
         }
+        console.log(bookObj);
         fetch("https://indecisive-coherent-scar.glitch.me/books",{
                 method: "POST",
                 headers: {
