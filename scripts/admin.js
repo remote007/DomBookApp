@@ -1,7 +1,7 @@
 import {baseURL} from "./baseURL.js"
-// window.onload = () => {
-//     getData();
-// };
+window.onload = () => {
+    getData();
+};
 
 let form = document.getElementById("form_id");
 form.addEventListener("submit",async function () {
@@ -21,12 +21,12 @@ form.addEventListener("submit",async function () {
         isVerified,
         borrowedDays,
         imageUrl
-    }
+    };
     try{
         await fetch("https://indecisive-coherent-scar.glitch.me/books",{
             method: "POST",
             headers: {
-                'Access-Control-Allow-Origin':"*",
+                "Access-Control-Allow-Origin":"*",
                 "content-type":"application/json",
             },
             body: JSON.stringify(bookObj),
@@ -38,3 +38,20 @@ form.addEventListener("submit",async function () {
         console.log(err);
     }
 });
+
+function getData(){
+    fetch("https://indecisive-coherent-scar.glitch.me/books").then((response) => response.json()).then(data => 
+      displayBooks(data)
+    );
+}
+
+function displayBooks(arr){
+    let div = document.getElementById("books");
+    arr.map((el,i) =>{
+        let card = document.createElement("div");
+        let book_name = document.createElement("h5");
+        book_name.textContent = `${el.title}`;
+        card.append(book_name);
+        div.append(card);
+    })
+}
