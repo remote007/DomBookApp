@@ -1,0 +1,1 @@
+export const baseURL = "https://indecisive-coherent-scar.glitch.me"
