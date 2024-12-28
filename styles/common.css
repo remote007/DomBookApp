@@ -25,6 +25,5 @@ a{
 
 #books > div{
     gap: 10px;
-    margin-top: 50px;
     box-shadow: 2px 2px salmon;
 }
