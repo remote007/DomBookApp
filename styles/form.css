@@ -1,5 +1,5 @@
 form{
-    height : 310px;
+    height : 350px;
     width: 360px;
     margin: auto;
     margin-top: 130px;
@@ -17,6 +17,18 @@ input{
     height: 60px;
     width: 180px;
     height: 30px;
+}
+
+select{
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 60px;
+    width: 185px;
+    height: 39px;
+    border-color: solid black;
 }
 
 label{

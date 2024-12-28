@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/common.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/form.css">
+    <title>ADMIN</title>
 </head>
 <body>
     <div id="nav"></div>
+    <form>
+        <h3>Add New Books</h3>
+        <label for="title_id">Title : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="title_id" type="text"><br>
+        <label for="author_id">Author : </label>&nbsp;&nbsp;
+        <input id="author_id" type="text">
+        <label for="author_id">Category : </label>
+        <select name="" id="">
+            <option id = "opt0" >Select Genre</option>
+            <option id = "opt1" value="fiction">Fiction</option>
+            <option id = "opt2" value="comedy">Comedy</option>
+            <option id = "opt3" value="technical">Technical</option>
+        </select>
+        <div id="btn">
+            <button type="reset" onclick="verifyCredentials()"><strong>ADD</strong></button>
+        </div>
+    </form>
 </body>
 <script src="./scripts/navbar.js"></script>
 <script>
