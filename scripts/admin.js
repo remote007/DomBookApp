@@ -41,7 +41,7 @@ form.addEventListener("submit",async function () {
 
 function getData(){
     fetch("https://indecisive-coherent-scar.glitch.me/books").then((response) => response.json()).then(data => 
-      displayBooks(data)
+        displayBooks(data)
     );
 }
 
@@ -51,7 +51,11 @@ function displayBooks(arr){
         let card = document.createElement("div");
         let book_name = document.createElement("h5");
         book_name.textContent = `${el.title}`;
-        card.append(book_name);
+        let author_name = document.createElement("h7");
+        author_name.textContent = `${el.author}`;
+        let category_name = document.createElement("h9");
+        category_name.textContent = `${el.category}`;
+        card.append(book_name,author_name,category_name);
         div.append(card);
     })
 }
