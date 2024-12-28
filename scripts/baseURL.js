@@ -1,1 +1,1 @@
-export const baseURL = "https://indecisive-coherent-scar.glitch.me"
+export const baseURL = "https://indecisive-coherent-scar.glitch.me";

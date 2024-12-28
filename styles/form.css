@@ -50,3 +50,12 @@ h3{
     background-color:goldenrod;
     height: 40px;
 }
+
+#inp_sub{
+    width: 120px;
+    text-align: center;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
