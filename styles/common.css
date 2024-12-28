@@ -1,0 +1,16 @@
+#nav{
+    display: flex;
+    width : 1420px;
+    height: 50px;
+    gap:80px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: bisque;
+}
+a{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+}
